@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emre Üte</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+ 
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">EU</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+ 
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-content">
+      <p class="hero-greeting">Hi, I'm</p>
+      <h1 class="hero-name">Emre Üte</h1>
+      <p class="hero-role">
+        <span class="typed-text" id="typed"></span><span class="cursor">|</span>
+      </p>
+      <p class="hero-sub">
+        CS &amp; Engineering student at Sabancı University · CGPA 3.96/4.0<br />
+        Passionate about systems programming, algorithms, and building cool things.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+ 
+  <!-- ABOUT / EDUCATION -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a Computer Science &amp; Engineering undergraduate at Sabancı University,
+            minoring in Mathematics. My interests span systems programming, compiler design,
+            high-performance computing, and AI. I love working close to the metal—from
+            RISC-V instruction set extensions to CUDA kernels—while also building
+            user-facing products.
+          </p>
+          <p>
+            Outside of tech, you'll find me playing classical guitar, lifting weights,
+            photographing wildlife, or diving underwater with a SCUBA tank.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <span class="highlight-num">3.96</span>
+              <span class="highlight-label">CGPA / 4.0</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-num">2×</span>
+              <span class="highlight-label">Tuition Scholarship</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-num">5+</span>
+              <span class="highlight-label">Research &amp; Intern roles</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-edu">
+          <div class="edu-card">
+            <div class="edu-icon">🎓</div>
+            <div class="edu-details">
+              <h3>B.Sc. Computer Science &amp; Engineering</h3>
+              <p class="edu-school">Sabancı University · Istanbul, Türkiye</p>
+              <p class="edu-period">Sep 2022 – Jun 2026</p>
+              <ul class="edu-bullets">
+                <li>Minor in Mathematics</li>
+                <li>CGPA: 3.96 / 4.0</li>
+                <li>Tuition Fee Scholarship — AY 2024–25 &amp; 2025–26</li>
+              </ul>
+            </div>
+          </div>
+          <div class="edu-card">
+            <div class="edu-icon">📜</div>
+            <div class="edu-details">
+              <h3>Machine Learning Specialization</h3>
+              <p class="edu-school">Andrew Ng · Coursera</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <h2 class="section-title">Experience</h2>
+      <div class="timeline">
+ 
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div>
+                <h3>Software Engineer Intern</h3>
+                <p class="tc-org">Technical University of Munich</p>
+              </div>
+              <span class="tc-period">Jun 2025 – Sep 2025</span>
+            </div>
+            <p class="tc-project">WarmWorld Advisors · Prof. Dr. Hartwig Anzt &amp; Yen Chen-Chen</p>
+            <ul class="tc-bullets">
+              <li>Recoded Ragel-based parsers in C++, added thorough unit tests, and optimized algorithms.</li>
+              <li>Benchmarked row-major vs. column-major performance of library functions.</li>
+            </ul>
+            <div class="tc-tags">
+              <span>C++</span><span>Ragel</span><span>HPC</span>
+            </div>
+          </div>
+        </div>
+ 
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div>
+                <h3>Learning Assistant — CS 305</h3>
+                <p class="tc-org">Sabancı University · Programming Languages</p>
+              </div>
+              <span class="tc-period">Sep 2025 – Jan 2026</span>
+            </div>
+            <ul class="tc-bullets">
+              <li>Designed and implemented homework assignments using Flex, Bison, and attribute grammars.</li>
+              <li>Held weekly office hours and proctored exams.</li>
+            </ul>
+            <div class="tc-tags">
+              <span>Flex</span><span>Bison</span><span>Teaching</span>
+            </div>
+          </div>
+        </div>
+ 
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div>
+                <h3>Undergraduate Researcher</h3>
+                <p class="tc-org">Sabancı University · PURE Program</p>
+              </div>
+              <span class="tc-period">Jul 2024 – Sep 2024</span>
+            </div>
+            <p class="tc-project">Secure Architecture for Post-Quantum Cryptography · Prof. Dr. Erkay Savas</p>
+            <ul class="tc-bullets">
+              <li>Integrated PQC algorithms as an ISA extension within the RISC-V architecture.</li>
+              <li>Focused on lattice-based operations for enhanced security and performance.</li>
+            </ul>
+            <div class="tc-tags">
+              <span>RISC-V</span><span>PQC</span><span>Systems</span>
+            </div>
+          </div>
+        </div>
+ 
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div>
+                <h3>Learning Assistant — CS 302</h3>
+                <p class="tc-org">Sabancı University · Formal Language &amp; Automata Theory</p>
+              </div>
+              <span class="tc-period">Sep 2024 – Jun 2025</span>
+            </div>
+            <ul class="tc-bullets">
+              <li>Held weekly office hours, proctored quizzes and exams, graded assignments.</li>
+            </ul>
+            <div class="tc-tags">
+              <span>Automata Theory</span><span>Teaching</span>
+            </div>
+          </div>
+        </div>
+ 
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div>
+                <h3>Undergraduate Researcher</h3>
+                <p class="tc-org">Sabancı University · PURE Program</p>
+              </div>
+              <span class="tc-period">Feb 2024 – Jun 2024</span>
+            </div>
+            <p class="tc-project">Who Gets What? Solving Matching Problems with AI · Prof. Dr. Esra Erdem</p>
+            <ul class="tc-bullets">
+              <li>Developed a constraint model in MiniZinc and Python to assign dormitory roommates.</li>
+            </ul>
+            <div class="tc-tags">
+              <span>MiniZinc</span><span>Python</span><span>AI</span>
+            </div>
+          </div>
+        </div>
+ 
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div>
+                <h3>Learning Assistant — MATH 101/102</h3>
+                <p class="tc-org">Sabancı University · Introduction to Calculus</p>
+              </div>
+              <span class="tc-period">Feb 2023 – Jan 2024</span>
+            </div>
+            <ul class="tc-bullets">
+              <li>Prepared problem sets and led interactive worksheet sessions for 20 students.</li>
+              <li>Proctored quizzes and conducted problem-solving sessions.</li>
+            </ul>
+            <div class="tc-tags">
+              <span>Calculus</span><span>Teaching</span>
+            </div>
+          </div>
+        </div>
+ 
+      </div>
+    </div>
+  </section>
+ 
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
+ 
+        <div class="project-card featured">
+          <div class="pc-top">
+            <span class="pc-badge">Graduation Project</span>
+            <span class="pc-period">Oct 2025 – Present</span>
+          </div>
+          <h3>LLM Simulation in Minecraft with Redstone</h3>
+          <p>Building a large language model inside Minecraft using redstone circuits as a bachelor graduation project — exploring computational universality at the most unexpected scale.</p>
+          <div class="pc-tags">
+            <span>Minecraft</span><span>Python</span><span>Architecture</span>
+          </div>
+        </div>
+ 
+        <div class="project-card">
+          <div class="pc-top">
+            <span class="pc-period">Feb 2025 – Jun 2025</span>
+          </div>
+          <h3>Meeting Scheduler Language</h3>
+          <p>Implemented a full lexical, syntactic, and semantic analyzer for a domain-specific language for scheduling online meetings.</p>
+          <div class="pc-tags">
+            <span>C</span><span>Bison</span><span>Flex</span><span>Compilers</span>
+          </div>
+        </div>
+ 
+        <div class="project-card">
+          <div class="pc-top">
+            <span class="pc-period">Feb 2025 – Jun 2025</span>
+          </div>
+          <h3>MyRide — Personalized Taxi Matching</h3>
+          <p>Mobile app replacing nearest-driver assignment with preference-based mutual matching between passengers and drivers for a better ride experience.</p>
+          <div class="pc-tags">
+            <span>Flutter</span><span>Dart</span><span>Firebase</span>
+          </div>
+        </div>
+ 
+        <div class="project-card">
+          <div class="pc-top">
+            <span class="pc-period">Sep 2024 – Jan 2025</span>
+          </div>
+          <h3>Independent Set Problem Report</h3>
+          <p>37-page rigorous report proving NP-completeness of the Independent Set problem and proposing heuristic polynomial-time approximation algorithms with thorough benchmarking.</p>
+          <div class="pc-tags">
+            <span>Algorithms</span><span>Python</span><span>LaTeX</span>
+          </div>
+        </div>
+ 
+        <div class="project-card">
+          <div class="pc-top">
+            <span class="pc-period">Feb 2024 – Jun 2024</span>
+          </div>
+          <h3>US Stock Market Analysis</h3>
+          <p>Explored correlations between metal stock prices and Tesla stock prices over five years; built k-NN and decision tree models for future price prediction.</p>
+          <div class="pc-tags">
+            <span>Python</span><span>pandas</span><span>NumPy</span><span>Matplotlib</span>
+          </div>
+        </div>
+ 
+      </div>
+    </div>
+  </section>
+ 
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+ 
+        <div class="skill-group">
+          <h3>Systems &amp; Low-Level</h3>
+          <div class="skill-tags">
+            <span>C++</span><span>C</span><span>CMake</span><span>RISC-V</span><span>MIPS</span><span>SystemVerilog</span>
+          </div>
+        </div>
+ 
+        <div class="skill-group">
+          <h3>HPC &amp; Parallel Computing</h3>
+          <div class="skill-tags">
+            <span>CUDA</span><span>OpenMP</span><span>Kokkos</span>
+          </div>
+        </div>
+ 
+        <div class="skill-group">
+          <h3>Compilers &amp; Languages</h3>
+          <div class="skill-tags">
+            <span>Bison</span><span>Flex</span><span>Ragel</span><span>Scheme</span>
+          </div>
+        </div>
+ 
+        <div class="skill-group">
+          <h3>AI / Data</h3>
+          <div class="skill-tags">
+            <span>Python</span><span>PyTorch</span><span>pandas</span><span>NumPy</span><span>MiniZinc</span>
+          </div>
+        </div>
+ 
+        <div class="skill-group">
+          <h3>Mobile &amp; Web</h3>
+          <div class="skill-tags">
+            <span>Flutter</span><span>Dart</span><span>Firebase</span>
+          </div>
+        </div>
+ 
+        <div class="skill-group">
+          <h3>Interests</h3>
+          <div class="skill-tags interest-tags">
+            <span>🎸 Classical Guitar</span>
+            <span>🏋️ Strength Training</span>
+            <span>📷 Wildlife Photography</span>
+            <span>🤿 SCUBA Diving</span>
+          </div>
+        </div>
+ 
+      </div>
+    </div>
+  </section>
+ 
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="contact-sub">I'm always open to interesting conversations, research collaborations, or new opportunities. Drop me a line!</p>
+      <div class="contact-links">
+        <a href="mailto:emre.ute@sabanciuniv.edu" class="contact-card">
+          <span class="contact-icon">✉️</span>
+          <span class="contact-label">emre.ute@sabanciuniv.edu</span>
+        </a>
+        <a href="https://linkedin.com/in/emreute" target="_blank" rel="noopener" class="contact-card">
+          <span class="contact-icon">💼</span>
+          <span class="contact-label">LinkedIn</span>
+        </a>
+        <a href="https://github.com/emreute" target="_blank" rel="noopener" class="contact-card">
+          <span class="contact-icon">🐙</span>
+          <span class="contact-label">GitHub</span>
+        </a>
+      </div>
+    </div>
+  </section>
+ 
+  <footer>
+    <p>Designed &amp; built by Emre Üte · 2026</p>
+  </footer>
+ 
+  <script src="script.js"></script>
+</body>
+</html>
