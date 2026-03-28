@@ -216,6 +216,14 @@ ul { list-style: none; }
  
 /* ===== SECTIONS ===== */
 section { padding: 100px 24px; }
+section:not(#hero)::before {
+  content: '';
+  display: block;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(91,143,255,0.3) 30%, rgba(167,139,250,0.3) 70%, transparent);
+  margin-bottom: 100px;
+  margin-top: -100px;
+}
 .container { max-width: var(--max-w); margin: 0 auto; }
 .section-title {
   font-size: clamp(28px, 4vw, 38px);
@@ -234,8 +242,24 @@ section { padding: 100px 24px; }
   border-radius: 2px;
 }
  
+/* ===== SPACE CANVAS ===== */
+#space-bg {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* All sections sit above the fixed canvas */
+#hero, #about, #experience, #projects, #skills, #learning, #contact, footer {
+  position: relative;
+  z-index: 1;
+}
+
 /* ===== ABOUT ===== */
-#about { background: var(--bg2); }
+#about { background: rgba(13,13,15,0.45); overflow: hidden; }
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -272,7 +296,9 @@ section { padding: 100px 24px; }
   gap: 20px;
 }
 .edu-card {
-  background: var(--bg3);
+  background: rgba(26,26,31,0.60);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 24px;
@@ -290,7 +316,7 @@ section { padding: 100px 24px; }
 .edu-bullets li { color: var(--text2); font-size: 14px; margin-bottom: 4px; }
  
 /* ===== EXPERIENCE / TIMELINE ===== */
-#experience { background: var(--bg); }
+#experience { background: rgba(13,13,15,0.45); }
 .timeline {
   position: relative;
   padding-left: 40px;
@@ -324,7 +350,7 @@ section { padding: 100px 24px; }
   height: 14px;
   border-radius: 50%;
   background: var(--accent);
-  border: 3px solid var(--bg);
+  border: 3px solid #0d0d0f;
   box-shadow: 0 0 0 3px rgba(91,143,255,0.25), 0 0 12px rgba(91,143,255,0.15);
   transition: box-shadow 0.2s, background 0.2s;
 }
@@ -333,7 +359,9 @@ section { padding: 100px 24px; }
   box-shadow: 0 0 0 4px rgba(167,139,250,0.3), 0 0 16px rgba(167,139,250,0.2);
 }
 .timeline-card {
-  background: var(--bg3);
+  background: rgba(26,26,31,0.60);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border);
   border-left: 2px solid rgba(91,143,255,0.25);
   border-radius: var(--radius);
@@ -404,14 +432,16 @@ section { padding: 100px 24px; }
 }
  
 /* ===== PROJECTS ===== */
-#projects { background: var(--bg2); }
+#projects { background: rgba(13,13,15,0.45); }
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 24px;
 }
 .project-card {
-  background: var(--bg3);
+  background: rgba(26,26,31,0.60);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 28px;
@@ -474,14 +504,16 @@ section { padding: 100px 24px; }
 }
  
 /* ===== SKILLS ===== */
-#skills { background: var(--bg); }
+#skills { background: rgba(13,13,15,0.45); }
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 24px;
 }
 .skill-group {
-  background: var(--bg3);
+  background: rgba(26,26,31,0.60);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 24px;
@@ -514,7 +546,7 @@ section { padding: 100px 24px; }
 .interest-tags span { font-size: 13px; }
  
 /* ===== LEARNING ===== */
-#learning { background: var(--bg); }
+#learning { background: rgba(13,13,15,0.45); }
 .learning-block { margin-bottom: 52px; }
 .learning-block:last-child { margin-bottom: 0; }
 .learning-sub {
@@ -535,7 +567,9 @@ section { padding: 100px 24px; }
   gap: 16px;
 }
 .book-card {
-  background: var(--bg3);
+  background: rgba(26,26,31,0.60);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 20px 24px;
@@ -564,7 +598,7 @@ section { padding: 100px 24px; }
 
 /* ===== CONTACT ===== */
 #contact {
-  background: var(--bg2);
+  background: rgba(13,13,15,0.45);
   text-align: center;
 }
 .contact-sub {
@@ -583,7 +617,9 @@ section { padding: 100px 24px; }
   display: flex;
   align-items: center;
   gap: 12px;
-  background: var(--bg3);
+  background: rgba(26,26,31,0.60);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 18px 28px;
