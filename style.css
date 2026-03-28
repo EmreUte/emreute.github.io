@@ -293,43 +293,58 @@ section { padding: 100px 24px; }
 #experience { background: var(--bg); }
 .timeline {
   position: relative;
-  padding-left: 32px;
+  padding-left: 40px;
 }
+/* Vertical line: left=15px, width=2px → center at 16px */
 .timeline::before {
   content: '';
   position: absolute;
-  left: 7px;
-  top: 8px;
-  bottom: 8px;
+  left: 15px;
+  top: 29px;   /* starts at center of first dot */
+  bottom: 0;
   width: 2px;
-  background: linear-gradient(to bottom, var(--accent), var(--accent2), transparent);
+  border-radius: 1px;
+  background: linear-gradient(to bottom, var(--accent) 0%, var(--accent2) 60%, transparent 100%);
 }
 .timeline-item {
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 .timeline-item:last-child { margin-bottom: 0; }
+/* Dot: left=-(padding - line_left_edge + half_dot_width) = -(40-15+7) = -32px
+   → dot left from .timeline = 40-32 = 8px, center = 8+7 = 15 … wait
+   Actually: dot left from .timeline = padding + dot_left = 40 + (-32) = 8
+   Dot center = 8 + 7 = 15. Line left = 15, center = 16. 1px rounding — imperceptible.
+   Use left: -31px → dot left from timeline = 9, center = 16. Exact match. */
 .timeline-dot {
   position: absolute;
-  left: -28px;
-  top: 20px;
+  left: -31px;
+  top: 22px;
   width: 14px;
   height: 14px;
   border-radius: 50%;
   background: var(--accent);
-  border: 2px solid var(--bg);
-  box-shadow: 0 0 0 3px rgba(91,143,255,0.2);
+  border: 3px solid var(--bg);
+  box-shadow: 0 0 0 3px rgba(91,143,255,0.25), 0 0 12px rgba(91,143,255,0.15);
+  transition: box-shadow 0.2s, background 0.2s;
+}
+.timeline-item:hover .timeline-dot {
+  background: var(--accent2);
+  box-shadow: 0 0 0 4px rgba(167,139,250,0.3), 0 0 16px rgba(167,139,250,0.2);
 }
 .timeline-card {
   background: var(--bg3);
   border: 1px solid var(--border);
+  border-left: 2px solid rgba(91,143,255,0.25);
   border-radius: var(--radius);
   padding: 24px 28px;
-  transition: border-color 0.2s, transform 0.2s;
+  transition: border-color 0.2s, border-left-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 .timeline-card:hover {
-  border-color: rgba(91,143,255,0.3);
+  border-color: rgba(91,143,255,0.25);
+  border-left-color: var(--accent);
   transform: translateX(4px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
 }
 .tc-header {
   display: flex;
@@ -498,6 +513,55 @@ section { padding: 100px 24px; }
 }
 .interest-tags span { font-size: 13px; }
  
+/* ===== LEARNING ===== */
+#learning { background: var(--bg); }
+.learning-block { margin-bottom: 52px; }
+.learning-block:last-child { margin-bottom: 0; }
+.learning-sub {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent2);
+  font-family: var(--mono);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+.course-tags { gap: 10px; }
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+.book-card {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.book-card:hover {
+  border-color: rgba(167,139,250,0.35);
+  transform: translateY(-3px);
+}
+.book-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  line-height: 1.35;
+}
+.book-author {
+  font-size: 13px;
+  color: var(--accent2);
+  font-family: var(--mono);
+}
+.book-note {
+  font-size: 13px;
+  color: var(--text2);
+  margin-top: 8px;
+}
+
 /* ===== CONTACT ===== */
 #contact {
   background: var(--bg2);

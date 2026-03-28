@@ -20,10 +20,10 @@ navLinks.querySelectorAll('a').forEach(link => {
  
 // ===== TYPED EFFECT =====
 const phrases = [
-  'CS & Engineering Student',
-  'Systems Programmer',
-  'HPC Enthusiast',
-  'Compiler Tinkerer',
+  'Computer Science',
+  'Computer Architecture',
+  'High-performance Computing',
+  'Compiler Frontend',
   'Minecraft LLM Builder',
 ];
 const typedEl = document.getElementById('typed');
